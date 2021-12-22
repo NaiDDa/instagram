@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { LoginLeft } from "../organisms";
 const Login = () => {
   return (
     <>
       <PageWrapper>
-        <LoginLeft />
-        <Wrapper>
+        <Carousel></Carousel>
+        <Main>
           <Logo>Instagram</Logo>
           <Form>
             <Input
@@ -15,7 +14,7 @@ const Login = () => {
               type="email"
             />
             <Input name="password" placeholder="비밀번호" type="password" />
-            <SubmitBtn>로그인</SubmitBtn>
+            <SubmotBtn>로그인</SubmotBtn>
             <LineBox>
               <LineText>또는</LineText>
             </LineBox>
@@ -34,7 +33,7 @@ const Login = () => {
             <AppImg src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_korean-ko.png/4a5c9d62d51b.png" />
             <AppImg src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_korean-ko.png/f155b664a93b.png" />
           </AppDownload>
-        </Wrapper>
+        </Main>
         <Footer>asdasd</Footer>
       </PageWrapper>
     </>
@@ -48,8 +47,13 @@ const PageWrapper = styled.body`
   align-items: center;
   justify-content: center;
 `;
+const Carousel = styled.div`
+  height: 618px;
+  width: 420px;
+  background-image: url("https://www.instagram.com/static/images/homepage/home-phones.png/43cc71bb1b43.png");
+`;
 
-const Wrapper = styled.div`
+const Main = styled.div`
   max-width: 350px;
   border: 1px solid #ddd;
   background: #fff;
@@ -68,14 +72,15 @@ const Input = styled.input`
   font-size: 11px;
   background: #fafafa;
 `;
-const SubmitBtn = styled.button`
-  width: 260px;
+const SubmotBtn = styled.button`
+  width: 268px;
   height: 30px;
   margin: 8px 40px;
-  background: #b3dbf5;
-  border: none;
+  background: #0095f6;
+  border: 1px solid transparent;
   border-radius: 4px;
   color: #fff;
+  padding: 5px 9px;
 `;
 const Form = styled.form`
   display: flex;
@@ -109,7 +114,7 @@ const FindPw = styled.a`
   margin-top: 12px;
   padding-bottom: 15px;
 `;
-const JoinBox = styled(Wrapper)`
+const JoinBox = styled.div`
   padding: 10px 0;
   margin-top: 10px;
 `;
